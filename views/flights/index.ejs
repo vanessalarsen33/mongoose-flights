@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+<table id="list">
+    <tr>
+      <th>Airline</th>
+      <th>Airport</th>
+      <th>Flight Number</th>
+      <th>Flight Departs</th>
+    </tr>
+    <% flights.forEach(function(eachFlight) { %>
+      <tr>
+          <td> <%= eachFlight.airline %> </td> 
+          <td> <%= eachFlight.airport %> </td>
+          <td> <%= eachFlight.flightNo %> </td> 
+          <td> <%= eachFlight.departs %> </td>
+          <td><a href="/flights/<%= eachFlight._id %>">DETAILS</a></td>
+      </tr>
+    <%  }); %>
+  </table>
+<%- include('../partials/footer') %>
