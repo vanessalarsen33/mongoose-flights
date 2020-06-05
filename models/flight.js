@@ -5,7 +5,9 @@ const destinationSchema = new Schema({
     content: String,
     destination: {
         type: String,
-        
+    },
+    arrival: {
+        type: Date,
     },
   });
 
